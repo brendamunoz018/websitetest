@@ -8,6 +8,7 @@ body {
 	font-size: 12px;
 	text-transform:uppercase;
 	font-weight: bold;
+	background-color: black;
 }
 
 a {
@@ -53,5 +54,6 @@ h2 {
 	margin: 100px;
 
 }
+
 
 
