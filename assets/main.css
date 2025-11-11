@@ -1,0 +1,54 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	background-image: url("jonakoh-_-HxtvH28DSVM-unsplash.jpg");
+	background-size: cover;
+	font-family: franklin gothic;
+	font-size: 12px;
+	text-transform:uppercase;
+	font-weight: bold;
+}
+
+a {
+	color: #FFF;
+	text-decoration: none;
+	font-size:14px;
+}
+
+h1 {
+	font-family: onely sans;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	color: #FFF;
+}
+
+h2 {
+	font-family: onely sans;
+	letter-spacing: 5px;
+	text-transform:uppercase;
+	color: #FFF;
+	text-align:center;
+	font-size:50px;
+}
+
+.header {
+	float:left;
+}
+
+.navigation {
+	padding:25px 0px 25px 25px;
+	float:right;
+	font-size:12px;
+	word-spacing: 30px;
+	letter-spacing: 1px;
+}
+
+.motto {
+	width:100%;
+	float:left;
+	margin:50px 0px;
+}
+.main-container {
+	margin: 100px;
+}
