@@ -6,7 +6,7 @@
 /* CSS Document */
 
 body {
-	background-image: url(../images/jonakoh-_-HxtvH28DSVM-unsplash.jpg);
+	background-image: url(../images/bg.png);
 	background-size: cover;
 	background-color: #000;
 	font-family: franklin gothic;
@@ -58,6 +58,7 @@ h2 {
 	margin: 100px;
 
 }
+
 
 
 
