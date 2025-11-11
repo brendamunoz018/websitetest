@@ -2,7 +2,7 @@
 /* CSS Document */
 
 body {
-	background-image: "../images/jonakoh-_-HxtvH28DSVM-unsplash.jpg";
+	background-image: url("../images/jonakoh-_-HxtvH28DSVM-unsplash.jpg");
 	background-size: cover;
 	font-family: franklin gothic;
 	font-size: 12px;
@@ -53,6 +53,7 @@ h2 {
 	margin: 100px;
 
 }
+
 
 
 
