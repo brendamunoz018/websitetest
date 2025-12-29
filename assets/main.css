@@ -1,0 +1,361 @@
+/* CSS Document */
+
+@charset "utf-8";
+@font-face {
+	font-family: onely sans;
+	src: url(OnelySans.otf);
+}
+
+:root {
+	--base-color: #000000;
+	--text-color: #ffffff;
+	--primary-color: #080808;
+	--secondary-color: #eeeeee;
+}
+
+/* body style */
+* {
+	top:0;
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+
+body {
+	top:0;
+	background-color: var(--base-color);
+}
+
+h1, h2, h3 {
+	font-family: 'Onely Sans';
+	color: var(--text-color);
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+
+p {
+	text-decoration: none;
+	color: var(--text-color);
+	font-family: "Stack Sans Text";
+	letter-spacing: 0.5px;
+}
+
+/* grid container */
+.grid-container {
+	display:grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 180px 100vh 100vh 600px 240px;
+	grid-template-areas: 
+	"nav"
+	"head"
+	"about"
+	"book"
+	"foot";
+	gap:0;
+	justify-items: center;
+	background-image: url(../images/bg.png);
+	background-repeat: no-repeat; /* Prevents the image from tiling */
+  	background-size: cover; /* Ensures the image covers the entire background */
+  	background-position: center; /* Centers the image */
+  	background-attachment: fixed;
+}
+
+
+/* navigation */
+nav {
+	grid-area: "nav";
+	display:flex;
+	width:min(1600px, 100%);
+	padding: 2em 3em;
+	z-index: 1000;
+	position: sticky;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.brand {
+	font-size: 1.5rem;
+	text-align: left;
+}
+
+.navbar-links ul {
+	display: flex;
+	flex-wrap: wrap;
+	list-style-type: none;
+	gap: 0 2em;
+}
+
+.navbar-links a {
+	text-decoration: none;
+	color: var(--text-color);
+	font-family: "Stack Sans Text";
+	letter-spacing: 0.5px;
+}
+
+.navbar-links li {
+	display: inline;
+	padding-left: 1em;
+	font-size:0.8rem;
+}
+
+.hover {
+  color: #ffffff;
+  position: relative;
+  display: inline-block;
+}
+
+.hover::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #FFF;
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.4s ease-out;
+}
+
+.hover:hover::before {
+  transform: scaleX(1);
+}
+
+.toggle-button {
+	position: absolute;
+	right:2rem;
+	top:2rem;
+	display: none;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 30px;
+	height: 21px;
+}
+
+.toggle-button .bar {
+	height: 3px;
+	width: 100%;
+	background-color: #FFF;
+	border-radius: 10px;
+}
+
+
+/* header */
+.header {
+	grid-area: "head";
+	margin-top:-150px;
+	display: flex;
+	align-items: center;
+	height:100vh;
+}
+
+.header-text {
+	width:80vw;
+	font-size: clamp(1.8rem, calc(6vw + 1rem), 4rem);
+	text-align:center;
+
+}
+
+
+/* about */
+.about {
+	width:100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap:50px;
+}
+
+.about img {
+	max-width:200px;
+	object-fit:cover;
+}
+
+.about-text {
+	width: 400px;
+	font-size: 0.8rem;
+}
+
+.about-text h2 {
+	font-size: 2rem;
+}
+
+.separator {
+	width:50px;
+	height:2px;
+	background-color: #fff;
+	margin:10px 0;
+}
+
+/* booking */
+.booking {
+	width:300px;
+}
+
+
+/* footer */
+.footer {
+	width: 100%;
+	display:grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap:20px;
+	padding: 3em 10em;
+	justify-content: center;
+	background-color: var(--primary-color);
+}
+
+.footer h2 {
+	text-align: left;
+	font-size: 1rem;
+	letter-spacing:2.5px;
+}
+
+.footer p {
+	font-size:0.6rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.footer-links ul {
+	list-style-type: none;
+	gap: 0 2em;
+}
+
+.footer-links a {
+	text-decoration: none;
+	color: var(--text-color);
+	font-family: "Stack Sans Text";
+	letter-spacing: 0.5px;
+}
+
+.footer-links li {
+	padding-top: 0.4em;
+	font-size: 0.7rem;
+}
+
+.footer-break {
+	margin-top:20px;
+	grid-column-start: 1;
+	grid-column-end: 4;
+	width: 100%;
+	height: 1px;
+	background-color: #333333;
+}
+
+.footer-copyright {
+	grid-column-start: 1;
+	grid-column-end: 4;
+	font-size: 0.5rem;
+	color: #555;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-family: "Stack Sans Text";
+}
+
+.hover-f {
+  color: #ffffff;
+  position: relative;
+  display: inline-block;
+}
+
+.hover-f::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #FFF;
+  bottom: -3px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.4s ease-out;
+}
+
+.hover-f:hover::before {
+  transform: scaleX(1);
+}
+
+
+
+@media (max-width: 500px) {
+	.grid-container {
+		display:grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto 100vh auto 600px 200px;
+		grid-template-areas: 
+		"nav"
+		"head"
+		"about"
+		"book"
+		"foot";
+		gap:0;
+		justify-items: center;
+		background-image: url(../images/bg.png);
+		background-repeat: no-repeat; /* Prevents the image from tiling */
+  		background-size: cover; /* Ensures the image covers the entire background */
+  		background-position: center; /* Centers the image */
+  		background-attachment: fixed;
+	}
+
+    nav {
+		padding: 2em;
+        align-items: center;
+    }
+	
+	.brand {
+		font-size: 1.3rem;
+	}
+
+    .toggle-button {
+        display: flex;
+    }
+
+	.navbar-links {
+		position: fixed;
+		top: 5em;
+		right: 2em;
+        display: none;
+    }
+
+    .navbar-links ul {
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: right;
+    }
+
+    .navbar-links ul li a {
+        padding: 0rem 0rem 0.6rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+	.hover::before {
+ 	bottom: 4px;
+	}
+
+	.header-text {
+	margin-top:40%;
+	}
+
+	.about {
+		padding:3em 0;
+		gap: 2em;
+	}
+
+	.about-text {
+		width:80%;
+	}
+
+.footer {
+	display:grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap:20px;
+	padding: 3em;
+}
+}
